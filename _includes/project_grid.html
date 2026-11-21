@@ -1,0 +1,19 @@
+<div class="project-grid">
+  {% for project in include.projects %}
+    {% if project.url contains "://" %}{% assign purl = project.url %}{% assign ext = true %}{% else %}{% assign purl = project.url | relative_url %}{% assign ext = false %}{% endif %}
+    <div class="project-container">
+      <div class="project-image-container">
+        <a href="{{ purl }}"{% if ext %} target="_blank" rel="noopener"{% endif %}>
+          <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}" class="u-max-full-width{% if project.pixelated %} pixelated{% endif %}" />
+        </a>
+      </div>
+      <div class="project-caption">
+        <a href="{{ purl }}"{% if ext %} target="_blank" rel="noopener"{% endif %}><b>{{ project.title }}</b></a><br/>
+        {{ project.subtitle }}
+        {% if project.tags %}
+          <div class="tags">{% for t in project.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

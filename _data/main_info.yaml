@@ -1,0 +1,15 @@
+# ---- Your basic info (shown in the header and footer) ----
+# Leave any link empty ("") to hide its icon.
+name: "Jacob Asimow"
+title: "Physicist & Engineer"
+location: "San Francisco, CA"
+email: "jacobasimow@gmail.com"
+profile_pic: "/assets/profile-pics/jacob.jpg"
+resume_pdf: "/assets/cv/Jacob_Asimow_Resume.pdf"
+github: ""
+linkedin: "https://www.linkedin.com/in/jacob-asimow"
+twitter: ""
+bsky: ""
+google_scholar: ""
+website: ""
+google_analytics_id: "" # GA4 measurement ID, e.g. "G-XXXXXXXXXX"

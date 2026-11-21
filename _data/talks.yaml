@@ -1,0 +1,18 @@
+# ---- Talks & proceedings ----
+# Link fields (all optional): paper_pdf, slides, poster, video, code, data
+talks:
+  - title: "Fast First Order Spin Propagation for Spin Matching"
+    authors: "<b>J. Asimow</b>"
+    venue: "2nd FCC Polarization (EPOL) Workshop, CERN, Geneva · Sept 2022"
+    slides: "https://indico.cern.ch/event/1181966/contributions/5055248/attachments/2517141/4327785/EPOL2022_Asimow.pdf"
+    event_url: "https://indico.cern.ch/event/1181966/contributions/5055248/"
+
+  - title: "Fast First-Order Spin Propagation for Spin Matching and Polarization Optimization with Bmad"
+    authors: "<b>J. M. Asimow</b>, G. H. Hoffstaetter, D. Sagan, M. G. Signorelli"
+    venue: "NAPAC'22: North American Particle Accelerator Conference, Albuquerque, NM · Aug 2022 (paper TUPA14, p. 369)"
+    paper_pdf: "https://doi.org/10.18429/JACoW-NAPAC2022-TUPA14"
+
+  # TODO: IPAC'22 (Bangkok, June 2022) - add the title once confirmed
+  # - title: ""
+  #   authors: "<b>J. M. Asimow</b>, ..."
+  #   venue: "IPAC'22: International Particle Accelerator Conference, Bangkok · June 2022"

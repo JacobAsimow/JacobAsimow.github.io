@@ -1,0 +1,39 @@
+# ---- Timeline ----
+# category: "work"  -> left side of the timeline
+# category: "school" -> right side of the timeline
+experiences:
+  - place: "Avicena Tech"
+    time: "Jan 2025 - Oct 2026"
+    title: "R&D Analysis Engineer"
+    subtitle: "Automated wafer-level uLED test framework (10x throughput), SPC & reliability analysis"
+    category: "work"
+
+  - place: "Cornell University"
+    time: "2020 - May 2024"
+    title: "B.A. Physics, Concentration in CS"
+    subtitle: "College of Arts and Sciences · 4.0 GPA"
+    category: "school"
+
+  - place: "Hoffstaetter Laboratory"
+    time: "Aug 2021 - May 2023"
+    title: "Research Assistant"
+    subtitle: "Spin-transport calculations in the Bmad accelerator toolkit; presented at IPAC22 & NAPAC22"
+    category: "school"
+
+  - place: "Brookhaven National Lab"
+    time: "Summer 2022"
+    title: "Summer Student"
+    subtitle: "Higher-order spin transport in solenoids for the Electron-Ion Collider"
+    category: "work"
+
+  - place: "Cornell Computing"
+    time: "Aug 2021 - Feb 2022"
+    title: "Python Teaching Assistant"
+    subtitle: "Introductory Python"
+    category: "school"
+
+  - place: "Lawrence Hall of Science"
+    time: "Summer 2021"
+    title: "Museum Educator"
+    subtitle: "Physics, biology & CS camps for grades 6-12"
+    category: "work"

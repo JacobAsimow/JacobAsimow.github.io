@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<div class="docs-section project-page">
+  <p class="back-link"><a href="{{ '/projects/' | relative_url }}">&larr; All projects</a></p>
+
+  {% if page.subtitle == "" or page.subtitle == nil %}
+    <h3>{{ page.title }}</h3>
+  {% else %}
+    <div class="title-subtitle">
+      <h3>{{ page.title }}</h3>
+      <h5>{{ page.subtitle }}</h5>
+    </div>
+  {% endif %}
+
+  {% if page.tags or page.links %}
+  <div class="project-meta">
+    {% if page.tags %}<div class="tags">{% for t in page.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>{% endif %}
+    {% if page.links %}
+      <div class="paper-buttons">
+        {% for l in page.links %}<a class="button" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.name }}</a>{% endfor %}
+      </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {{ content }}
+</div>

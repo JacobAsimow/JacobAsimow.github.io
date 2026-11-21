@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% assign info = site.data.main_info %}
+  <meta charset="utf-8">
+  <title>{% if page.title and page.title != "Home" %}{{ page.title }} | {% endif %}{{ info.name }}</title>
+  <meta name="description" content="{{ page.description | default: info.title | escape }} — {{ info.name }}">
+  <meta name="author" content="{{ info.name }}">
+  <meta property="og:title" content="{{ page.title | default: info.name }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="{{ info.name }}" />
+  {% if site.url != "" %}<link rel="canonical" href="{{ page.url | absolute_url }}" />{% endif %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ '/libs/external/skeleton/normalize.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/libs/external/skeleton/skeleton.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/libs/external/fontawesome-free-6.6.0-web/css/all.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/libs/external/academicons-1.8.6/css/academicons.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/libs/custom/my_css.css' | relative_url }}">
+
+  <!-- JS -->
+  <script src="{{ '/libs/external/jquery-3.1.1.min.js' | relative_url }}"></script>
+  <script src="{{ '/libs/custom/my_js.js' | relative_url }}"></script>
+
+  <link rel="icon" type="image/svg+xml" href="{{ '/libs/icon.svg' | relative_url }}">
+</head>
+<body>
+  <div class="container">
+
+    <section class="header">
+      <div class="row">
+        <div class="three columns">
+          <a href="{{ '/' | relative_url }}"><img class="u-max-full-width profile-pic" src="{{ info.profile_pic | relative_url }}" alt="{{ info.name }}"></a>
+        </div>
+        <div class="nine columns main-description">
+          <h1>{{ info.name }}</h1>
+          <p>{{ info.title }}</p>
+          {% if info.location and info.location != "" %}<p>{{ info.location }}</p>{% endif %}
+          {% if info.email and info.email != "" %}<p><a class="email-link" href="mailto:{{ info.email }}">{{ info.email }}</a></p>{% endif %}
+          <p class="header-social">{% include social_links.html size="fa-lg" %}</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="navbar-spacer"></div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link{% if page.nav == 'about' %} active{% endif %}" href="{{ '/' | relative_url }}">About</a></li>
+          <li class="navbar-item"><a class="navbar-link{% if page.nav == 'projects' %} active{% endif %}" href="{{ '/projects/' | relative_url }}">Projects</a></li>
+          <li class="navbar-item"><a class="navbar-link{% if page.nav == 'skills' %} active{% endif %}" href="{{ '/skills/' | relative_url }}">Skills</a></li>
+          <li class="navbar-item"><a class="navbar-link{% if page.nav == 'talks' %} active{% endif %}" href="{{ '/talks/' | relative_url }}">Talks</a></li>
+          {% if info.resume_pdf and info.resume_pdf != "" %}
+          <li class="navbar-item"><a class="navbar-link" href="{{ info.resume_pdf | relative_url }}" target="_blank" rel="noopener">Resume</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+
+    {{ content }}
+
+    <div class="footer">
+      <div class="row">
+        <div class="four columns">{{ info.name }}</div>
+        <div class="four columns">{% if info.email and info.email != "" %}<a class="email-link" href="mailto:{{ info.email }}">{{ info.email }}</a>{% endif %}</div>
+        <div class="four columns">{% include social_links.html %}</div>
+      </div>
+      <p class="credit">Design based on <a href="https://github.com/msaveski/www_personal" target="_blank" rel="noopener">Martin Saveski's template</a>.</p>
+    </div>
+
+  </div>
+
+  {% include google_analytics.html %}
+</body>
+</html>

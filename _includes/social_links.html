@@ -1,0 +1,10 @@
+{% assign info = site.data.main_info %}
+<span class="social-links">
+  {% if info.github and info.github != "" %}<a href="{{ info.github }}" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github {{ include.size }}"></i></a>{% endif %}
+  {% if info.linkedin and info.linkedin != "" %}<a href="{{ info.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin {{ include.size }}"></i></a>{% endif %}
+  {% if info.twitter and info.twitter != "" %}<a href="{{ info.twitter }}" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter {{ include.size }}"></i></a>{% endif %}
+  {% if info.bsky and info.bsky != "" %}<a href="{{ info.bsky }}" target="_blank" rel="noopener" aria-label="Bluesky"><i class="fa-brands fa-bluesky {{ include.size }}"></i></a>{% endif %}
+  {% if info.google_scholar and info.google_scholar != "" %}<a href="{{ info.google_scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar {{ include.size }}"></i></a>{% endif %}
+  {% if info.website and info.website != "" %}<a href="{{ info.website }}" target="_blank" rel="noopener" aria-label="Website"><i class="fa-solid fa-globe {{ include.size }}"></i></a>{% endif %}
+  {% if info.resume_pdf and info.resume_pdf != "" %}<a href="{{ info.resume_pdf | relative_url }}" target="_blank" rel="noopener" aria-label="Resume"><i class="fa-solid fa-file-lines {{ include.size }}"></i></a>{% endif %}
+</span>

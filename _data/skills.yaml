@@ -1,0 +1,12 @@
+# ---- Skills (grouped) ----
+skills:
+  - group: "Programming"
+    items: ["Python", "Java", "C#", "OCaml", "Fortran", "Lua (PICO-8)"]
+  - group: "Data Analysis"
+    items: ["NumPy", "Matplotlib", "PyTorch", "RStudio", "Mathematica"]
+  - group: "Test & Lab"
+    items: ["Test automation", "DAQs", "DCAs", "RF/DC instrumentation", "Statistical process control"]
+  - group: "CAD"
+    items: ["Onshape"]
+  - group: "Dev Tools"
+    items: ["GitHub", "VS Code", "Eclipse", "Unix", "LaTeX"]

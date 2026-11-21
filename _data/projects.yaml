@@ -1,0 +1,22 @@
+# ---- Projects grid ----
+# url can point to a page in _projects/ or to an external link
+# pixelated: y -> keeps pixel-art thumbnails crisp
+projects:
+  - title: "LED Concert Sign"
+    subtitle: "LED marquee listing concerts and shows at walkable SF venues"
+    thumbnail: "/assets/projects/led-concert-sign/photo.jpg"
+    url: "/projects/led-concert-sign.html"
+    tags: ["Hardware", "LED matrix", "Video"]
+
+  - title: "Jamba Jumble"
+    subtitle: "Push-your-luck smoothie puzzler, made in 48 hours for GMTK Game Jam 2022"
+    thumbnail: "/assets/projects/jamba-jumble/screenshot-2.png"
+    url: "/projects/jamba-jumble.html"
+    tags: ["PICO-8", "Game jam"]
+    pixelated: y
+
+  - title: "Laser Sine Wave Generator"
+    subtitle: "Created for Cornell's \"Cultivating Public Engagement in Physics\" course"
+    thumbnail: "/assets/projects/laser-sine-wave/thumbnail.jpg"
+    url: "/projects/laser-sine-wave.html"
+    tags: ["Physics demo", "Video", "Informal Science Education"]

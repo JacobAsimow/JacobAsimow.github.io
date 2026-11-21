@@ -1,0 +1,14 @@
+---
+layout: default
+title: Skills
+nav: skills
+permalink: /skills/
+---
+<div class="docs-section" id="skills">
+  {% for group in site.data.skills.skills %}
+    <div class="skill-group">
+      <span class="skill-label">{{ group.group }}</span>
+      <div class="tags">{% for s in group.items %}<span class="tag">{{ s }}</span>{% endfor %}</div>
+    </div>
+  {% endfor %}
+</div>

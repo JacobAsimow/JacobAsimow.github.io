@@ -1,0 +1,9 @@
+---
+layout: default
+title: Talks
+nav: talks
+permalink: /talks/
+---
+<div class="docs-section" id="talks">
+  {% for paper in site.data.talks.talks %}{% include paper.html paper=paper %}{% endfor %}
+</div>

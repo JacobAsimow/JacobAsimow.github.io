@@ -1,0 +1,16 @@
+<div class="paper">
+  <p class="title"><b>{{ include.paper.title }}</b></p>
+  <p>{{ include.paper.authors }}</p>
+  <p><i>{{ include.paper.venue }}</i></p>
+  <div class="paper-buttons">
+    {% assign link_kinds = "paper_pdf,slides,event_url,poster,video,code,data" | split: "," %}
+    {% for kind in link_kinds %}
+      {% assign link = include.paper[kind] %}
+      {% if link and link != "" %}
+        {% if link contains "://" %}{% assign href = link %}{% else %}{% assign href = link | relative_url %}{% endif %}
+        {% case kind %}{% when "paper_pdf" %}{% assign label = "Paper" %}{% when "event_url" %}{% assign label = "Event" %}{% else %}{% assign label = kind | capitalize %}{% endcase %}
+        <a class="button" href="{{ href }}" target="_blank" rel="noopener">{{ label }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

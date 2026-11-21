@@ -1,0 +1,28 @@
+# Site settings
+title: "Jacob's Portfolio"
+# For a GitHub Pages *user* site (username.github.io) leave baseurl empty.
+# For a *project* site (username.github.io/repo-name) set it to "/repo-name".
+baseurl: ""
+url: ""
+
+source:      .
+destination: ./_site
+includes:    ./_includes
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name.html
+
+defaults:
+  - scope:
+      type: projects
+    values:
+      layout: project
+      nav: projects
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
