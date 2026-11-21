@@ -1,43 +1,36 @@
-# Portfolio Site
+# Martin Saveski's Website
 
-Personal portfolio built with [Jekyll](https://jekyllrb.com/), based on
-[msaveski/www_personal](https://github.com/msaveski/www_personal).
+## Updates guide
+Change one of the files in `_data`, unless you are changing the look of the website.
 
-## Editing content
-Almost everything lives in `_data/` — you rarely need to touch HTML.
-
-| File | What it controls |
-|---|---|
-| `_data/main_info.yaml` | Name, title, email, photo, social links, resume PDF |
-| `_data/projects.yaml` | Project cards on the Projects page |
-| `_data/skills.yaml` | Skills section |
-| `_data/talks.yaml` | Talks & proceedings page |
-| `index.html` | The About page (home) |
-| `_projects/*.md` | Detail pages for individual projects |
-
-Images go in `assets/` (profile photo in `assets/profile-pics/`, project
-thumbnails in `assets/projects/<name>/`, resume in `assets/cv/`).
-
-### Adding a project page
-1. Copy `_projects/jamba-jumble.md` to `_projects/my-project.md` and edit it.
-2. Add an entry in `_data/projects.yaml` with `url: "/projects/my-project.html"`.
-
-## Running locally
-Requires Ruby 3.x (macOS's system Ruby 2.6 is too old — install with
-`brew install ruby` or rbenv).
-
-```sh
-bundle install
-bundle exec jekyll serve
-# open http://localhost:4000
+Test changes with:
+```
+jekyll serve
 ```
 
-## Deploying (GitHub Pages)
-1. Push this repo to GitHub. Naming it `<username>.github.io` serves it at
-   `https://<username>.github.io` (keep `baseurl: ""`). Any other repo name
-   serves at `https://<username>.github.io/<repo>` — set `baseurl: "/<repo>"`
-   in `_config.yml`.
-2. In the repo: **Settings → Pages → Build from branch → `main` / root**.
+Push to the ML web directory:
+```
+rm -rf public_html
+mkdir public_html
+```
+```
+./__deploy.sh
+```
 
-## Libraries
-Skeleton CSS, Font Awesome 6.6, Academicons, jQuery 3.1.1.
+More info on the [Media Lab wiki](http://wiki.media.mit.edu/view/Necsys/WebPagePersonal).
+
+**Stanford links**
+- Use fetch!
+- [Basic WWW for Individual Users](https://uit.stanford.edu/service/web/centralhosting/howto_user)
+- [AFS File Transfer](https://uit.stanford.edu/service/afs/file-transfer/macintosh)
+
+
+## External Libraries
+- Framework: [Jekyll](http://jekyllrb.com/)
+- CSS
+  - [Skeleton](getskeleton.com)
+  - Tabs: [Skeleton Tabs](https://github.com/nathancahill/skeleton-tabs)
+  - Experience: [Timeline](https://codepen.io/NilsWe/pen/FemfK)
+  - Icons: [Font Awesome](http://fontawesome.io/)
+- JS
+  - [Jquery (3.1.1)](https://jquery.com/)
